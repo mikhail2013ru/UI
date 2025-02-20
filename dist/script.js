@@ -260,6 +260,31 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.animateOverTime = functi
   }
   return _animateOverTime;
 };
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.fadeIn = function (dur, display, fin) {
+  for (let i = 0; i < this.length; i++) {
+    this[i].style.display = display || 'block';
+    const _fadeIn = complection => {
+      this[i].style.opacity = complection;
+    };
+    const ani = this.animateOverTime(dur, _fadeIn, fin);
+    requestAnimationFrame(ani);
+  }
+  return this;
+};
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.fadeOut = function (dur, fin) {
+  for (let i = 0; i < this.length; i++) {
+    const _fadeOut = complection => {
+      this[i].style.opacity = 1 - complection;
+      if (complection === 1) {
+        this[i].style.display = 'none';
+      }
+      this[i].style.opacity = complection;
+    };
+    const ani = this.animateOverTime(dur, _fadeOut, fin);
+    requestAnimationFrame(ani);
+  }
+  return this;
+};
 
 /***/ }),
 
@@ -388,7 +413,9 @@ $('div').click(function () {
 // console.log($('button').html(''));
 
 // console.log($('.some').closest('.findme'));
-console.log($('.more').eq(0).siblings());
+// console.log($('.more').eq(0).siblings());
+
+$('.findme').fadeOut(1800);
 })();
 
 /******/ })()
