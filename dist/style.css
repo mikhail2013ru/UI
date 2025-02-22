@@ -81,3 +81,76 @@
 .btn-outline-primary:hover {
   background-color: #025fff;
 }
+.btn-outline-success {
+  border-color: #2a9924;
+  color: #2a9924;
+}
+.btn-outline-success:hover {
+  background-color: #2a9924;
+}
+.btn-outline-danger {
+  border-color: #ea2e41;
+  color: #ea2e41;
+}
+.btn-outline-danger:hover {
+  background-color: #ea2e41;
+}
+.btn-outline-warning {
+  border-color: #ffc907;
+  color: #ffc907;
+}
+.btn-outline-warning:hover {
+  background-color: #ffc907;
+}
+.btn-outline-dark {
+  border-color: #343a40;
+  color: #343a40;
+}
+.btn-outline-dark:hover {
+  background-color: #343a40;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.block-center {
+  margin: 0 auto;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: hidden;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.f-centered {
+  justify-content: center;
+  align-items: center;
+}
+
+.f-space-around {
+  justify-content: space-around;
+}
+
+.f-space-between {
+  justify-content: space-between;
+}

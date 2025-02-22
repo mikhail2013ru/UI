@@ -65,4 +65,36 @@
             background-color: $primary;
         }
     }
+    &-outline-success {
+        border-color: $success;
+        color: $success;
+        &:hover {
+            background-color: $success;
+        }
+    }
+    &-outline-danger {
+        border-color: $danger;
+        color: $danger;
+        &:hover {
+            background-color: $danger;
+        }
+    }
+    &-outline-warning {
+        border-color: $warning;
+        color: $warning;
+        &:hover {
+            background-color: $warning;
+        }
+    }
+    &-outline-dark {
+        border-color: $dark;
+        color: $dark;
+        &:hover {
+            background-color: $dark;
+        }
+    }
+    &-block {
+        display: block;
+        width: 100%;
+    }
 }
