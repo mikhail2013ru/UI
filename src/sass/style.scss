@@ -1,1 +1,10 @@
-@import './general/base.scss';
+@use './general/base.scss' as b;
+@use './general/variables.scss' as v;
+@use './general/typography';
+@use './components/button';
+
+
+
+// * {
+//     color: v.$danger;
+// }
