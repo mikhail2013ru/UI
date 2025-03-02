@@ -1,7 +1,8 @@
-// @use './button.scss' as *;
+@use '../general/variables' as *;
 
 .dropdown {
     position: relative;
+    display: inline-block;
     &-toggle {
         &:after {
             content: '';
@@ -23,5 +24,19 @@
         border: 1px solid rgba(0,0,0,.15);
         border-radius: 2px;
         background-color: #fff;
+        min-width: 100%;
+        padding: 10px 0;
+    }
+    &-item {
+        display: block;
+        width: 100%;
+        padding: 7px 10px;
+        color: $dark;
+        background-color: transparent;
+        border: 0;
+        text-decoration: none;
+        &:hover {
+            background-color: rgba(0,0,0, .05);
+        }
     }
 }
