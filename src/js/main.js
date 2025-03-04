@@ -47,3 +47,38 @@ $('[data-count="second"]').on('click', () => {
 $('button').eq(2).on('click', () => {
     $('.w-500').fadeToggle(800);
 });
+
+$('#trigger').click(() => {
+    $('#trigger').createModal({
+        text: {
+            title: 'Modal title',
+            body: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem odit quod hic, sunt distinctio culpa veniam consequuntur itaque officiis sapiente quis ipsam nulla dolorum mollitia! Fugiat dolorum suscipit voluptatibus quasi.Nemo, aut unde. Pariatur odit amet rem totam suscipit quae esse doloribus laudantium. Quasi voluptatibus harum consequuntur explicabo dolor tempora odio est. Molestias, laboriosam porro harum facilis perspiciatis iste voluptatum.' 
+        },
+        btns: {
+            count: 3,
+            settings: [
+                [
+                    'Close',
+                    ['btn-danger', 'mr-10'],
+                    true
+                ],
+                [
+                    'Save changes',
+                    ['btn-success'],
+                    false,
+                    () => {
+                        alert('Данные сохранены');
+                    }
+                ],
+                [
+                    'Another btn',
+                    ['btn-warning', 'ml-10'],
+                    false,
+                    () => {
+                        alert('Zaebis');
+                    }
+                ]
+            ]
+        }
+    });
+});
