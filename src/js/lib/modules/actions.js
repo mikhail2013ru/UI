@@ -81,3 +81,54 @@ $.prototype.closest = function(selector) {
 
     return this;
 };
+
+$.prototype.findElement = function(selector) {
+    console.log(selector);
+    // console.log(el);
+    // const tab = document.querySelector('.tab-panel');
+    // const tabItems = tab.querySelectorAll('.tab-item');
+    // console.log(selector);
+    // const tabContent = document.querySelectorAll('.tab-content');
+    // tabContent.forEach((content, i) => {
+    //     // console.log(content[i].closest('.tab-content--active'));
+    //     // if (content)
+    //     return content;
+    //     // this[i].remove('.tab-content--active')
+    //     // console.log(this[i]); 
+    //     // if (this[i].closest('.tab-content')) {
+    //     //     console.log(content);
+    //     // }
+    // });
+    const findElem = Array.from(selector).find(content => {
+        console.log(selector);
+        console.log(content);
+        // return findElem;
+        return content.textContent = '.tab-content--active'
+        // console.log(el);
+        // if (selector && el) {
+        //     // content.remove('tab-content--active')
+        //     // console.log(el);
+        //     // return content == '.tab-content--active'
+        // }
+
+        // return content;
+    });
+
+    // console.log(findElem);
+
+    // return findElem;
+
+    // console.log(findElem);
+    // let counter = 0;
+    // for (let i = 0; i < this.length; i++) {
+    //     this[i] = this[i].closest(selector);
+    //     counter++;
+    // }
+
+    // const objLength = Object.keys(this).length;
+    // for (; counter < objLength; counter++) {
+    //     delete this[counter];
+    // }
+    // console.log(this);
+    return this;
+};

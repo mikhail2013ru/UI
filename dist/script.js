@@ -124,6 +124,69 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.createModal = function (
 
 /***/ }),
 
+/***/ "./src/js/lib/components/tab.js":
+/*!**************************************!*\
+  !*** ./src/js/lib/components/tab.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
+
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.tab = function () {
+  for (let i = 0; i < this.length; i++) {
+    (0,_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).on('click', () => {
+      const tab = document.querySelector('.tab');
+      const tabContent = tab.querySelectorAll('.tab-content--active');
+      console.log(tabContent);
+      (0,_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).addClass('tab-item--active').siblings().removeClass('tab-item--active').closest('.tab')
+      // .findElement(tabContent, 'tab-content--active')
+      .findElement(tabContent).eq((0,_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).index()).addClass('tab-content--active');
+      // if (this[i].closest('.tab')) {
+      //     console.log(tabContent)
+      //     // tabContent.find('tab-content--active')
+
+      //     // this[i].classList.remove('tab-content--active')
+      //     const tabC = [...tabContent];
+      //     // console.log(tabC);
+      //     // let a = tabC.find((elem) => {
+      //     //     elem.remove('tab-content--active')
+      //     //     console.log(elem);
+      //     //     return elem
+      //     //     // console.log(elem)
+      //     // })
+
+      //     // console.log(a);
+      // }
+
+      // .find('.tab-content')
+      // let tab = this[i].closest('.tab-item')
+      // let tabArr = [...tab.children];
+
+      // let res = tabArr.find(function(item) {
+      //     // console.log(item);
+      //     return item
+      // })
+
+      // console.log(tab);
+      // let tab = this[i].closest('.tab');
+      // let tabArr = [...tab.children]
+      // console.log(tabArr.find('.tab-content'));
+      // console.log([...tab.children].find('.tab-content'));
+      // const user = ['T', 'M', 'Y'];
+      // console.log([...user]);
+      // let arr = this[i].closest('.tab');
+      // console.log(...arr.find('.tab-content'));
+      // $(this[i]) 
+      //     .eq($(this[i]).index())
+      //     .addClass('tab-content--active')
+    });
+  }
+};
+(0,_core__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-tabpanel] .tab-item').tab();
+
+/***/ }),
+
 /***/ "./src/js/lib/core.js":
 /*!****************************!*\
   !*** ./src/js/lib/core.js ***!
@@ -199,6 +262,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_effects__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/effects */ "./src/js/lib/modules/effects.js");
 /* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/dropdown */ "./src/js/lib/components/dropdown.js");
 /* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/modal */ "./src/js/lib/components/modal.js");
+/* harmony import */ var _components_tab__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/tab */ "./src/js/lib/components/tab.js");
+
 
 
 
@@ -280,6 +345,56 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.closest = function (sele
   for (; counter < objLength; counter++) {
     delete this[counter];
   }
+  return this;
+};
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.findElement = function (selector) {
+  console.log(selector);
+  // console.log(el);
+  // const tab = document.querySelector('.tab-panel');
+  // const tabItems = tab.querySelectorAll('.tab-item');
+  // console.log(selector);
+  // const tabContent = document.querySelectorAll('.tab-content');
+  // tabContent.forEach((content, i) => {
+  //     // console.log(content[i].closest('.tab-content--active'));
+  //     // if (content)
+  //     return content;
+  //     // this[i].remove('.tab-content--active')
+  //     // console.log(this[i]); 
+  //     // if (this[i].closest('.tab-content')) {
+  //     //     console.log(content);
+  //     // }
+  // });
+  const findElem = Array.from(selector).find(content => {
+    console.log(selector);
+    console.log(content);
+    // return findElem;
+    return content.textContent = '.tab-content--active';
+    // console.log(el);
+    // if (selector && el) {
+    //     // content.remove('tab-content--active')
+    //     // console.log(el);
+    //     // return content == '.tab-content--active'
+    // }
+
+    // return content;
+  });
+
+  // console.log(findElem);
+
+  // return findElem;
+
+  // console.log(findElem);
+  // let counter = 0;
+  // for (let i = 0; i < this.length; i++) {
+  //     this[i] = this[i].closest(selector);
+  //     counter++;
+  // }
+
+  // const objLength = Object.keys(this).length;
+  // for (; counter < objLength; counter++) {
+  //     delete this[counter];
+  // }
+  // console.log(this);
   return this;
 };
 
